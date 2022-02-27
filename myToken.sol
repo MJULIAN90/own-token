@@ -12,16 +12,10 @@ contract MyTockenIRC20Basic is MyTockenIRC20{
     string public constant symbol= 'Roc';
     string public constant creator = 'Julian Ruiz';
     uint8 public constant decimals= 2;
+    uint256 totalSupply_;
     mapping (address => uint) balances;
     mapping (address => mapping (address=>uint)) allowed;
-    uint256 totalSupply_;
     address owner;
-
-
- /* event transferEvent(address indexed from, address indexed to, uint256 tokens);
-    event approvalEvent(address indexed owner, address indexed spender, uint256 tokens);  */
-
-   
 
     constructor (uint256 initialSupply) {
         totalSupply_ = initialSupply;
